@@ -1,0 +1,301 @@
+/* ------ Редактирование профиля ------ */
+#dark-blur-profile {
+    background: rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(5px);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#edit-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    position: fixed;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    z-index: 1001;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: var(--green-premium);
+    box-shadow: 0px 0px 12px #00000047;
+    border: 2px dashed var(--orange-premium);
+    color: var(--white-classic);
+    font-family: Sansation;
+}
+
+#edit-profile div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#edit-profile div a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/icons/icon-close.png');
+    background-size: contain;
+}
+
+#edit-profile p {
+    font-size: 16px;
+    text-align: center;
+}
+
+#edit-profile h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#edit-profile input:not([type="submit"]) {
+    padding: 6px;
+    background-color: #0f351eba;
+    border: 1px dashed var(--white-classic);
+    color: var(--white-classic);
+    border-radius: 4px;
+    font-size: 16px;
+    box-shadow: 0px 0px 4px #00000047;
+    max-width: 400px;
+    outline: none;
+    user-select: none;
+}
+
+#edit-profile input[type="submit"] {
+    padding: 4px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #7e3c00;
+    background-color: #fc8212;
+    border: 1px dashed #0f351eba;
+    box-shadow: 0px 0px 12px #00000047;
+    transition: all 0.1s;
+}
+
+#edit-profile input::selection {
+    background-color: var(--orange-premium);
+    color: var(--white-classic)
+}
+
+#edit-profile input[type="submit"]:hover { background-color: var(--orange-premium); }
+#edit-profile input[type="submit"]:active { background-color: #ef7403f0; }
+
+#error {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    z-index: 1001;
+    transform: translate(-50%, 0);
+    padding: 5px 15px 15px 15px;
+    background-color: var(--white-classic);
+    border-radius: 15px;
+    font-family: Sansation;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--red-premium);
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.error-note {
+    color: #000;
+    font-size: 12px;
+    font-style: italic;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* ----------------------------- Блок с личной информацией ----------------------------- */
+.user-personal-information-block {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Sansation;
+    margin: 20px 0px;
+}
+
+.user-personal-information-mockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ------ Имя пользователя ------ */
+.full-name-style {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* ------ Фото пользователя ------ */
+.user-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background-color: var(--green-premium);
+    background-image: url('/images/icons/icon-user.png');
+    background-size: 110px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    text-align: center;
+    margin: 18px 0px;
+    box-shadow: 0px 4px 12px #00000047;
+}
+
+/* ------ Личная информация ------ */
+.information { margin-bottom: 8px; }
+.user-personal-information-mockup span { font-weight: bold; }
+.user-personal-information-mockup img { user-select: none; width: 18px; }
+
+#orange { color: var(--orange-premium); }
+
+/* ------ Кнопки ------ */
+.profile-button {
+    border-radius: 20px;
+    border: 2px solid var(--green-premium);
+    padding: 10px 0px;
+    width: 170px;
+    display: inline-block;
+    margin: 0px 4px;
+    font-weight: bold;
+    user-select: none;
+    transition: all 0.1s;
+}
+
+#green-button {
+    background-color: var(--green-premium);
+    color: var(--white-classic);
+}
+
+#white-button {
+    background-color: var(--white-classic);
+    color: black;
+}
+
+#orange-button {
+    border: 2px solid var(--orange-premium);
+    background-color: var(--orange-premium);
+    color: var(--white-classic);
+    width: auto;
+    padding: 10px;
+    margin-top: 8px;
+}
+
+#orange-button:hover {
+    color: black;
+    background-color: var(--white-classic);
+}
+
+#orange-button:active {
+    background-color: #d36907;
+    border: 2px solid #d36907;
+    color: var(--white-classic);
+}
+
+#green-button:hover, #white-button:hover {
+    color: var(--white-classic);
+    background-color: var(--orange-premium);
+    border: 2px solid var(--orange-premium);
+}
+
+#green-button:active, #white-button:active {
+    background-color: #d36907;
+    border: 2px solid #d36907;
+}
+
+/* ----------------------------- Блок с купонами ----------------------------- */
+.block-with-coupons {
+    display: flex;
+    justify-content: center;
+    font-family: Sansation;
+    margin: 20px 0px;
+}
+
+.title-block-coupons { margin-bottom: 20px; user-select: none; }
+.title-block-coupons h1 { margin-bottom: 6px;}
+
+.block-with-coupons-mockup {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 590px);
+    gap: 20px 20px;
+}
+
+.non-coupon {
+    color: var(--orange-premium);
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+/* ------ Купон ------ */
+.coupon {
+    width: 550px;
+    height: 120px;
+    font-size: 18px;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    position: relative;
+    color: var(--white-classic);
+    background-color: var(--orange-premium);
+    box-shadow: 0px 4px 12px #00000047;
+}
+.coupon ::selection { background: var(--green-premium); }
+
+/* ------ Фото товара на купоне ------ */
+.photo-discounted-product {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    user-select: none;
+    background-color: var(--green-premium);
+    box-shadow: 0px 4px 12px #00000047;
+    transition: all 0.2s;
+}
+.photo-discounted-product:hover { transform: rotate(6deg); }
+
+/* ------ Скидка ------ */
+.discount {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    user-select: none;
+    font-weight: bold;
+    z-index: 20;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    left: 85px;
+    background-color: var(--red-premium);
+    animation: transfusion-discounts 1s infinite;
+    box-shadow: 0px 4px 12px #00000047;
+}
+
+@keyframes transfusion-discounts {
+    0% { top: 14px; }
+    50% { top: 8px; }
+    100% { top: 14px; }
+}
+
+/* ------Разметка текста на купоне ------ */
+.coupon-mockup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 14px;
+    hyphens: auto;
+}
+.coupon-mockup h1 { font-weight: bold; }
+/* ----------------------------- Стиль завершён ----------------------------- */

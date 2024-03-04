@@ -1,0 +1,123 @@
+/* ----------------------------- Блок с информацией о компнаии ----------------------------- */
+#company-learning-bg { background-image: url('../images/backgrounds/company-learning-bg.jpg'); }
+#company { background-image: url('../images/backgrounds/company-building.jpg'); margin: 18px 0px;}
+
+.block-about-us {
+    width: 100%;
+    height: 800px;
+    text-align: center;
+    font-family: Sansation;
+    color: var(--white-classic);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-about-us h1 {
+    font-size: 50px;
+    font-weight: bold;
+    background-color: #ef7503a8;
+    text-align: center;
+    padding: 2px 8px;
+    margin-bottom: 20px;
+}
+
+.block-about-us p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* ------ Блок с [Видением/Миссией] компании ------ */
+#orange { background-color: var(--orange-premium); }
+#green { background-color: var(--green-premium); }
+#orange ::selection { background: var(--green-premium); }
+
+.block-of-information {
+    width: 100%;
+    height: 400px;
+    margin: 18px 0px;
+    text-align: center;
+    font-family: Sansation;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-classic);
+    box-shadow: 0px 0px 12px #00000047;
+}
+
+.block-of-information h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.block-of-information p {
+    font-size: 18px;
+    line-height: 1.2;
+    user-select: none;
+}
+
+/* ------ Блок развитие компании ------ */
+.mockup-about-us {
+    font-family: Sansation;
+    display: flex;
+    justify-content: center;
+    margin: 18px 0px;
+}
+
+.mockup-about-us h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 14px;
+    color: var(--green-premium);
+}
+
+.mockup-about-us p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* ------ Блок с сотрудником компании ------ */
+.mockup-about-me {
+    font-family: Sansation;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.mockup-about-me h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--green-premium);
+}
+
+.mockup-about-me span { 
+    line-height: 1.5;
+    font-size: 24px;
+    font-weight: bold;
+    user-select: none;
+    color: var(--orange-premium);
+}
+
+.mockup-about-me p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.mockup-about-me img {
+    height: 540px;
+    border-radius: 16px;
+    margin: 20px 0px 0px 20px;
+    padding: 10px;
+    user-select: none;
+    background-color: var(--green-premium);
+    box-shadow: 0px 0px 12px #00000047;
+}
+
+#footer { margin-top: 18px !important}
+/* ----------------------------- Стиль завершён ----------------------------- */

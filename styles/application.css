@@ -1,0 +1,45 @@
+/* ----------------------------- Приложение для установки ----------------------------- */
+.mockup-application {
+    font-family: Sansation;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+/* ------ Заголовок ------ */
+.text-application h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--green-premium);
+}
+
+/* ------ Пояснительный текст ------ */
+.text-application p {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: var(--green-premium);
+    margin-top: 10px;
+}
+
+/* ------ Картинка с QR-кодом ------ */
+.application-qr-code {
+    max-width: 900px;
+    user-select: none;
+}
+
+/* ------ Ссылки на скачивания ------ */
+.mockup-installer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 20px 0px 14px;
+}
+
+.mockup-installer img {
+    margin: 0px 20px;
+    user-select: none;
+    transition: all 0.2s;
+}
+.mockup-installer img:hover { transform: scale(1.08); }
+/* ----------------------------- Стиль завершён ----------------------------- */

@@ -1,0 +1,150 @@
+.font-low, .font-medium, .font-high { font-family: Sansation }
+.font-low { font-size: 16px }
+.font-medium { font-size: 20px }
+.font-high { font-size: 24px }
+
+.orange { color: var(--orange-premium) }
+
+.bold { font-weight: bold }
+
+/* Основные стили. */
+
+#dark-blur {
+    background: rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(5px);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1001;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: var(--white-classic);
+    border-radius: 15px;
+}
+
+#card::-webkit-scrollbar {
+    width: 4px;
+    background-color: none;
+}
+  
+#card::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--gray-light);
+}
+
+#card::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.head {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.status {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--white-classic);
+}
+
+.news { background-color: var(--orange-premium) }
+.popular { background-color: var(--green-premium) }
+
+.image {
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+}
+
+.name { margin-bottom: 5px }
+
+.ruble {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('/images/icons/icon-ruble.png');
+}
+
+.close {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('/images/icons/icon-close.png');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+}
+
+.orange-line {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(270deg, rgba(232, 65, 15, 0.06) 3.65%, #EF7403 100%);
+    position: absolute;
+    left: 0;
+}
+
+.description { padding: 10px 0 }
+
+h1.font-medium.bold.orange { margin-bottom: 10px }
+
+.nutritional, .compound { padding-top: 10px }
+
+.nutritional > table {
+    width: 100%;
+    font-size: 16px;
+    font-family: Sansation;
+}
+
+.nutritional > table td:last-child { text-align: right }
+
+.nutritional > table tr { height: 32px }
+
+.nutritional > table tr:not(:last-child), details:not(:last-child) { border-bottom: 1px solid var(--green-premium) }
+
+.arrow {
+    display: inline-block;
+    background-image: url('/images/icons/icon-arrow.png');
+    width: 16px;
+    height: 16px;
+}
+
+.compound-name {
+    display: block;
+    width: 400px;
+}
+
+details summary {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+summary::-webkit-details-marker { display: none }
+
+details[open] .arrow { transform: rotate(180deg) }
+
+details p { margin: 10px 0 }
+
+details:last-child summary { padding-bottom: 0 }

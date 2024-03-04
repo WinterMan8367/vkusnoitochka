@@ -1,0 +1,93 @@
+/* ----------------------------- Блок с качеством ----------------------------- */
+.block-quality {
+    width: 100%;
+    height: 800px;
+    font-family: Sansation;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start
+}
+
+@keyframes animation-quality {
+    0% {
+        background-image: url('../images/backgrounds/same_quality_main_back_desktop_min.jpg');
+    }
+    33% {
+        background-image: url('../images/backgrounds/keep_balance_main_back_desktop_min.jpg');
+    }
+    66% {
+        background-image: url('../images/backgrounds/quality-cutlet.jpg');
+    }
+    100% {
+        background-image: url('../images/backgrounds/same_quality_main_back_desktop_min.jpg');
+    }
+}
+#quality { animation: animation-quality 10s infinite; }
+
+/* ------ Заголовок ------ */
+.block-quality h1 {
+    color: var(--white-classic);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 340px;
+    background-color: #ef7503a8;
+    padding: 2px 8px;
+}
+
+/* ------ Текст ------ */
+.block-quality p {
+    color: var(--white-classic);
+    font-size: 20px;
+    text-align: center;
+    padding: 2px 8px;
+    margin-top: 14px;
+    line-height: 1.4;
+}
+
+/* ----------------------------- Блок ответы на вопросы ----------------------------- */
+.questions-and-answers {
+    display: flex;
+    justify-content: center;
+    font-family: Sansation;
+    padding: 20px 0px 30px;
+}
+
+/* ------ Заголовок блока ------ */
+.questions-and-answers h1 {
+    font-size: 40px;
+    color: var(--green-premium);
+    font-weight: bold;
+    user-select: none;
+}
+
+/* ------ Карточка с вопросом ------ */
+.questions-and-answers details {
+    border-radius: 8px;
+    padding: 18px 16px;
+    background-color: var(--white-classic);
+    margin-top: 24px;
+    box-shadow: 0 0 8px 1px #9b9b9b47;
+}
+
+/* ------ Вопрос ------ */
+.questions-and-answers details summary {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--green-premium);
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.questions-and-answers details summary:active { color: var(--orange-premium); }
+
+/* ------ Ответ на вопрос ------ */
+.questions-and-answers details p {
+    padding: 12px 10px 0px;
+    font-size: 18px;
+    line-height: 1.2;
+}
+/* ----------------------------- Стиль завершён ----------------------------- */

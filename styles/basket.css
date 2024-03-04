@@ -1,0 +1,435 @@
+/* ----------------------------- Корзина ----------------------------- */
+#basket {
+    background-color: var(--white-classic);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    width: 340px;
+    min-height: 100%;
+    font-family: Sansation;
+}
+
+#dark-blur-basket {
+    background: rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(5px);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.close-basket {
+    display: block;
+    background-image: url('/images/icons/icon-close.png');
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: translate(0, -50%);
+}
+
+.close-checkout {
+    display: block;
+    background-image: url('/images/icons/icon-close.png');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+/* ------ Линия ------ */
+.orange-line {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(270deg, rgba(232, 65, 15, 0.06) 3.65%, #EF7403 100%);
+    position: absolute;
+    display: block;
+    left: 0;
+}
+
+/* ------ Заголовок корзины ------ */
+.basket-title {
+    margin: 15px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.basket-title h1 { font-size: 20px; font-weight: bold; }
+.basket-title a { color: var(--red-premium); }
+.basket-title a:active { color: black; }
+
+/* ------ Карточка товара в корзине ------ */
+.product-card-in-cart {
+    height: 75px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--green-premium);
+}
+
+.product-in-cart-mockup-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2px 0px 0px 10px;
+}
+
+.product-in-cart-mockup-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+/* ------ Фото товара ------ */
+.photo-product-in-cart {
+    border: 1px dashed var(--green-premium);
+    border-radius: 8px;
+    user-select: none;
+    transition: all 0.2s;
+}
+.photo-product-in-cart:hover { transform: rotate(-3deg); }
+
+.product-in-cart-mockup-2 h1 {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.product-in-cart-mockup-2 a img { user-select: none; }
+
+.product-in-cart-mockup-2 span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* ------ Счётчик ------ */
+.product-counrte {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--green-premium);
+    border-radius: 20px;
+    padding: 4px;
+    width: 78px;
+    user-select: none;
+}
+
+.product-counrte span, .product-counrte a {
+    font-size: 16px;
+    background-color: var(--white-classic);
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 12px #00000047;
+}
+
+.product-counrte a {
+    color: black;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 22px;
+    height: 22px;
+}
+.product-counrte a:active { background-color: var(--orange-premium); }
+
+/* ------ Итоги покупки ------ */
+.order-summary { padding: 15px; }
+
+.order-summary div {
+    display: flex;
+    justify-content: space-between;  
+}
+.order-summary div p { margin-bottom: 3px; }
+
+.order-summary div span { font-weight: bold; }
+
+.order-summary a {
+    padding: 7px 0px;
+    border-radius: 20px;
+    color: var(--white-classic);
+    background-color: var(--orange-premium);
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    transition: all 0.2s;
+}
+.order-summary a:hover { background-color: var(--red-premium); }
+.order-summary a:active { background-color: var(--orange-premium); }
+
+.ruble {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icons/icon-ruble.png);
+    margin-left: 5px;
+}
+
+.align {
+    display: flex;
+    align-items: center;
+}
+
+.omg {
+    height: calc(100vh - 180px);
+    overflow-y: auto;
+}
+
+.omg::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--gray-light);
+}
+
+.omg::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: var(--orange-premium);
+}
+
+.button-not-allowed {
+    cursor: not-allowed !important;
+    background-color: var(--gray-light) !important;
+}
+
+/* ------ Модальное окно оформления заказа ------ */
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1002;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: var(--white-classic);
+}
+
+.modal h1 {
+    color: var(--orange-premium);
+    font-size: 24px;
+    font-family: Sansation;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal p {
+    font-size: 16px;
+    font-family: Sansation;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.modal form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.block-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.modal select, .modal input:not([type="checkbox"]) {
+    padding: 6px;
+    box-sizing: border-box;
+    background-color: var(--white-classic);
+    border: 1px dashed var(--orange-premium);
+    color: #000;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 470px;
+    outline: none;
+    user-select: none;
+}
+
+.modal input::selection {
+    background: var(--orange-premium);
+    color: var(--white-classic);
+}
+
+.modal input[type="submit"] {
+    padding: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--white-classic);
+    background-color: var(--orange-premium);
+    border: 2px solid var(--orange-premium);
+    font: bold 16px Sansation;
+    box-shadow: 0px 0px 12px #00000047;
+}
+
+.modal input[type="submit"]:hover {
+    background-color: var(--red-premium);
+    border: 2px solid var(--red-premium);
+}
+.modal input[type="submit"]:active {
+    background-color: var(--white-classic);
+    color: var(--orange-premium);
+    border: 2px solid var(--orange-premium);
+}
+
+.modal label {
+    font: bold 16px Sansation;
+    background-color: var(--orange-premium);
+    color: var(--white-classic);
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modal label:hover { background-color: var(--red-premium) }
+
+.modal label:active {
+    border: 2px solid var(--orange-premium);
+    background-color: var(--white-classic);
+    color: var(--orange-premium);
+}
+
+.modal input[type="checkbox"] {
+    display: none;
+    cursor: pointer;
+}
+
+.bonus.disabled, .use-coupon.disabled {
+    display: none;
+}
+
+/* ------ Модальное окно завершения заказа ------ */
+
+.complete-order {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1002;
+    width: 510px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: var(--white-classic);
+}
+
+.complete-order h1 {
+    color: var(--orange-premium);
+    font-size: 24px;
+    font-family: Sansation;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.complete-order hr {
+    margin: 10px 0;
+}
+
+.complete-order p {
+    font: 16px Sansation;
+    margin-bottom: 5px;
+}
+
+.complete-order table {
+    width: 100%;
+    font: 16px Sansation;
+}
+
+.complete-order table td:last-child {
+    text-align: right;
+}
+
+.complete-order table td {
+    padding: 5px 0;
+}
+
+.ruble {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('/images/icons/icon-ruble.png');
+}
+
+.complete-order .orange {
+    color: var(--orange-premium);
+}
+
+.complete-order .red {
+    color: var(--red-premium);
+}
+
+.complete-order .bold {
+    font-weight: bold;
+}
+
+.complete-order .center {
+    text-align: center;
+}
+
+.complete-order .high {
+    font-size: 20px;
+}
+
+.complete-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.complete-buttons input[type="submit"], .complete-order a {
+    width: 100px;
+    padding: 4px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--white-classic);
+    background-color: var(--orange-premium);
+    border: 1px solid var(--orange-premium);
+    font: bold 16px Sansation;
+    box-shadow: 0px 0px 12px #00000047;
+    transition: all 0.2s ease;
+}
+
+.complete-order a {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.complete-buttons input[type="submit"]:hover, .complete-order a:hover {
+    background-color: var(--red-premium);
+    border: 1px solid var(--red-premium);
+}
+.complete-buttons input[type="submit"]:active, .complete-order a:active {
+    background-color: var(--white-classic);
+    color: var(--orange-premium);
+    border: 1px solid var(--orange-premium);
+}
+
+/* ----------------------------- Стиль завершён ----------------------------- */

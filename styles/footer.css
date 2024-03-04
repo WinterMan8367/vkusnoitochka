@@ -1,0 +1,87 @@
+/* ----------------------------- Подвал страницы ----------------------------- */
+#footer {
+    width: 100%;
+    background-color: var(--green-premium);
+    display: flex;
+    justify-content: center;
+    font-family: Sansation;
+    padding-bottom: 14px;
+    margin-top: 30px;
+}
+
+.footer-marking {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-block {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------ Заголовки ------ */
+#footer h1 {
+    font-size: 22px;
+    font-weight: bold;
+    user-select: none;
+    letter-spacing: 1.4px;
+    margin-top: 20px;
+    color: var(--orange-premium);
+}
+
+/* ------ Ссылки ------ */
+#footer a {
+    font-size: 16px;
+    margin-top: 6px;
+    position: relative;
+    user-select: none;
+    color: var(--white-classic);
+    transition: all 0.1s;
+}
+
+#footer a:before {
+    content: '';
+	width: 46px;
+	height: 2px;
+	background-color: var(--orange-premium);
+	bottom: -2px; 
+	position: absolute;
+	transform: scaleX(0);
+	transition: transform 0.2s;
+	transform-origin: right;
+}
+
+#footer a:hover::before {
+    transform: scaleX(1);
+	transition: transform 0.2s;
+	transform-origin: left;
+}
+
+#footer a:active { color: var(--orange-premium);}
+
+/* ------ Текст [Контактная информация] ------ */
+.footer-block span {
+    font-size: 16px;
+    margin-top: 6px;
+    color: var(--white-classic);
+}
+
+/* ------ Карта заведения ------ */
+.footer-map {
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 20px;
+    user-select: none;
+    border: 2px dashed var(--orange-premium);
+}
+
+/* ------ Копирайтинг ------ */
+.copyright {
+    height: 18px;
+    text-align: center;
+    background-color: var(--orange-premium);
+    color: var(--green-premium);
+}
+/* ----------------------------- Стиль завершён ----------------------------- */

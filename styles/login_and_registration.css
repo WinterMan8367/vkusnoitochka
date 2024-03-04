@@ -1,0 +1,123 @@
+/* ----------------------------- Регистрация/Авторизация ----------------------------- */
+body {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ------ Окно ------ */
+.window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--green-premium);
+    width: 440px;
+    font-family: Sansation;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px #00000047;
+    border: 2px dashed var(--orange-premium);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ------ Логотип ------ */
+.company-logo-window-markup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+.logo {
+    display: block;
+    padding: 6px 14px;
+    border-radius: 8px;
+    background-color: #0f351eba;
+    transition: all 0.1s;
+}
+.logo:hover { background-color: #082513ba; }
+.logo:active { background-color: #134226ba; }
+
+/* ------ Гамбургер ------ */
+#hamburger-logo { transition: all 1s ease; }
+
+@keyframes shake {
+    0% { transform: translate(0px, 2px); }
+    33% { transform: translate(-2px, -1px); }
+    66% { transform: translate(2px, 0px); }
+    100% { transform: translate(-1px, 1px); }
+}
+#hamburger-logo:hover { animation: shake 0.12s infinite alternate; }
+
+@keyframes wild-shake {
+    0% { transform: translate(0px, 20px); }
+    20% { transform: translate(-20px, -19px); }
+    40% { transform: translate(20px, 0px); }
+    60% { transform: translate(-19px, 19px); }
+    80% { transform: translate(-12px, 0px); }
+    100% { transform: translate(20px, -20px); }
+}
+#hamburger-logo:active { animation: wild-shake 0.1s infinite alternate; }
+
+/* ------ Поле для ввода ------ */
+.split-fields {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.indentation-fields { margin-right: 10px; }
+
+.input-field {
+    width: 96%;
+    padding: 10px 8px;
+    background-color: #0f351eba;
+    border: 1px dashed white;
+    color: var(--white-classic);
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    box-shadow: 0px 0px 4px #00000047;
+    outline: none;
+    user-select: none;
+}
+
+/* ------ Кнопка ------ */
+.window-button {
+    width: 100%;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    color: #7e3c00;
+    background-color: #fc8212;
+    border: 1px dashed #0f351eba;
+    box-shadow: 0px 0px 12px #00000047;
+    transition: all 0.1s;
+}
+.window-button:hover { background-color: var(--orange-premium);}
+.window-button:active { background-color: #ef7403f0;}
+
+/* ------ Ссылки ------ */
+.window-link {
+    color: var(--white-classic);
+    transition: all 0.2s;
+}
+.window-link:hover { color: var(--orange-premium); }
+.link-transition { display: flex; width: 100%; }
+
+/* ------ Текст ------ */
+.window-text {
+    color: var(--white-classic);
+    user-select: none;
+}
+.text-indent { margin-bottom: 12px;}
+/* ----------------------------- Стиль завершён ----------------------------- */

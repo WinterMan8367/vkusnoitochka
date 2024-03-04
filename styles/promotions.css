@@ -1,0 +1,116 @@
+/* ----------------------------- Блок с рекламой ----------------------------- */
+.marking-mockup {
+    font-family: Sansation;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ------ Постер с рекламой ------ */
+.poster-storage { position: relative; }
+.advertising-poster {
+    width: 100%;
+    height: 400px;
+    user-select: none;
+    border-radius: 18px;
+    box-shadow: 0px 4px 12px #00000047;
+}
+
+/* ------ Перемотка ------ */
+.poster-storage a {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--white-classic);
+    background-color: var(--orange-premium);
+    box-shadow: 0px 4px 12px #00000047;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0; right: 0;
+    margin: 0px 20px 20px 0;
+    transition: all 0.2s;
+    animation: advertising-animation 2s infinite;
+}
+
+.poster-storage a:hover {
+    background-color: var(--red-premium);
+    transform: scale(1.08);
+    font-size: 26px;
+}
+
+@keyframes advertising-animation {
+    0% { bottom: 0; }
+    50% { bottom: 30px; }
+    100% { bottom: 0; }
+}
+
+/* ----------------------------- Карточки с акциями ----------------------------- */
+.promotion-card {
+    font-size: 18px;
+    width: auto;
+    height: auto;
+    display: flex;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 12px #00000047;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-wrap: break-word;
+}
+
+/* ------ Текст ------ */
+.info-card h1 {
+    font-size: 34px;
+    font-weight: bold;
+    color: var(--green-premium);
+}
+
+.info-card span {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--green-premium);
+}
+
+/* ------ Кнопка ------ */
+.info-card button {
+    background-color: var(--orange-premium);
+    color: var(--white-classic);
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0px 4px 12px #00000047;
+    transition: all 0.2s;
+    user-select: none;
+    cursor: pointer;
+}
+.info-card button:hover { background-color: var(--green-premium); }
+.info-card button:active { background-color: var(--orange-premium); }
+
+/* ------ Картинка ------ */
+.promotion-card-image {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 220px;
+    min-width: 200px;
+}
+
+.promotion-card img {
+    max-width: 200px;
+    transition: all 0.2s;
+    user-select: none;
+}
+.promotion-card img:hover { transform: scale(1.06); }
+/* ----------------------------- Стиль завершён ----------------------------- */

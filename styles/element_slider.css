@@ -1,0 +1,73 @@
+/* ----------------------------- Контейнер слайдера ------------------------------ */
+.slideshow-container {
+  position: relative;
+	border-radius: 16px;
+	min-width: 737px;
+	margin-top: 14px;
+  user-select: none;
+  margin: 20px 0px 14px;
+  z-index: 1;
+}
+
+/* ------ Фото слайдеров ------ */
+.advertising_slide {
+	width: 737px;
+  height: 382px;
+	border-radius: 16px;
+  box-shadow: 0px 0px 12px #00000047;
+}
+
+/* ------ Стрелочки ------ */
+.prev, .next {
+  font-size: 20px;
+  font-weight: bold;
+	border-radius: 8px;
+  color: var(--green-premium);
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  margin-top: -22px;
+  padding: 14px 18px;
+  transition: all 0.1s;
+}
+
+.next { right: 0; }
+
+.prev:hover, .next:hover {
+  background-color: #274f34bd;
+  font-weight: 300;
+  color: var(--white-classic);
+}
+
+.prev:active, .next:active { background-color: #17311fbd; }
+
+/* ------ Кол-во слайдеров ------ */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: var(--gray-light);
+  border-radius: 2px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover { background-color: var(--orange-premium); }
+
+/* ------ Анимация ------ */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
